@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - master
-        env:
-          GH_USERNAME: "${{ secrets.GH_USERNAME }}"
-          GH_MAIL: "${{ secrets.GH_MAIL }}"
 jobs:
   gh-pages-deploy:
     name: Deploying to Github Pages
@@ -18,6 +15,6 @@ jobs:
       - name: Install packages
         run: npm i
       - name: Set Creds
-        run: git config user.name "${GH_USERNAME}" && git config user.email "${GH_MAIL}"
+        run: git config user.name "rajkale99" && git config user.email "kaleraj.rk@gmail.com"
       - name: Deploy
         run: npm run deploy
