@@ -28,10 +28,10 @@ const fetchDevices = async () => {
     console.log("devices fetch failed");
   }
 };
-const fetchChangelog = async (filename, codename, ziptype) => {
+const fetchChangelog = async (filename, codename) => {
   try {
     const res = await request(
-      `${baseURL}/OTA/${codename}/changelogs_${ziptype}.txt`,
+      `${baseURL}/OTA/changelogs_${codename}.txt`,
       false,
     );
 
