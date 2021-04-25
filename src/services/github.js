@@ -44,7 +44,7 @@ const fetchChangelog = async (filename, codename, ziptype) => {
 const fetchBuilds = async (codename) => {
   try {
     const res = await request(
-      `${baseURL}/OTA/11/${codename}/official/vanilla.json`,
+      `${baseURL}/OTA/11/${codename}.json`,
     );
     console.log(res);
     const promises = res.response
