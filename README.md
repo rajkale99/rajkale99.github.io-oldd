@@ -1,4 +1,4 @@
-# Superior OS Download Page
+# Legion OS Download Page
 
 ## Project setup
 ```

@@ -22,8 +22,8 @@ export default {
     Logo,
   },
   created() {
-    document.title = "Superior OS | Downloads";
-    document.head.querySelector("meta[name=description]").content = "Superior OS | Downloads";
+    document.title = "Legion OS | Downloads";
+    document.head.querySelector("meta[name=description]").content = "Legion OS | Downloads";
   },
   computed: {
     subname() {

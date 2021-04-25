@@ -85,7 +85,7 @@ export default {
       const { device } = this.$store.state;
 
       if (device && device.name) {
-        document.title = `${device.name} (${this.$route.params.codename}) | Superior OS Downloads`;
+        document.title = `${device.name} (${this.$route.params.codename}) | Legion OS Downloads`;
       }
 
       return device;
