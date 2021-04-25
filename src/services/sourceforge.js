@@ -13,7 +13,7 @@ const fetchDownloadsCount = async (filename, codename) => {
 };
 
 const generateDownloadURL = (filename, codename) => {
-  const downloadBase = `https://downloads.sourceforge.net/project/legionrom/${codename}/${filename}`;
+  const downloadBase = `https://downloads.sourceforge.net/project/legionrom/files/${codename}/${filename}`;
   return `${downloadBase}?r=&ts=${getTimestamp()}&use_mirror=autoselect`;
 };
 
