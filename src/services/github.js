@@ -2,13 +2,13 @@ import request from "../helpers/request";
 import { fetchDownloadsCount } from "./sourceforge";
 import { humanDate, humanSize } from "../helpers/utils";
 
-const baseURL = "https://raw.githubusercontent.com/SuperiorOS-Devices";
+const baseURL = "https://raw.githubusercontent.com/rajkale99";
 
 // eslint-disable-next-line consistent-return
 const fetchDevices = async () => {
   try {
     const res = await request(
-      `${baseURL}/official_devices/eleven/devices.json`,
+      `${baseURL}/OTA/11/devices.json`,
     );
 
     const brands = [];
@@ -31,7 +31,7 @@ const fetchDevices = async () => {
 const fetchChangelog = async (filename, codename) => {
   try {
     const res = await request(
-      `${baseURL}/changelogs/eleven/xcalibur_${codename}.txt`,
+      `${baseURL}/OTA/${codename}/changelogs_${ziptype}.txt`,
       false,
     );
 
@@ -44,7 +44,7 @@ const fetchChangelog = async (filename, codename) => {
 const fetchBuilds = async (codename) => {
   try {
     const res = await request(
-      `${baseURL}/official_devices/eleven/builds/${codename}.json`,
+      `${baseURL}/OTA/11/${codename}/official/${ziptype}.json`,
     );
     console.log(res);
     const promises = res.response
@@ -71,7 +71,7 @@ const fetchBuilds = async (codename) => {
 
 const fetchROMChangelog = async () => {
   const res = await request(
-    "https://raw.githubusercontent.com/SuperiorOS-Devices/changelogs/eleven/changelogs.txt",
+    "https://raw.githubusercontent.com/rajkale99/OTA/11/changelogs.txt",
     false,
   );
   return res;

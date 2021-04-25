@@ -1,7 +1,7 @@
 import request from "../helpers/request";
 import { getToday, getTimestamp } from "../helpers/utils";
 
-const baseURL = "https://sourceforge.net/projects/superioros";
+const baseURL = "https://sourceforge.net/projects/legionrom";
 
 const fetchDownloadsCount = async (filename, codename) => {
   try {
@@ -13,7 +13,7 @@ const fetchDownloadsCount = async (filename, codename) => {
 };
 
 const generateDownloadURL = (filename, codename) => {
-  const downloadBase = `https://downloads.sourceforge.net/project/superioros/${codename}/${filename}`;
+  const downloadBase = `https://downloads.sourceforge.net/project/legionrom/${codename}/${filename}`;
   return `${downloadBase}?r=&ts=${getTimestamp()}&use_mirror=autoselect`;
 };
 
